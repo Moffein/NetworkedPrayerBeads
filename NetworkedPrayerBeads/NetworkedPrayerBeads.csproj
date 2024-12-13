@@ -96,9 +96,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>libs\BepInEx\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="R2API.ContentManagement">
-      <HintPath>libs\R2API\R2API.ContentManagement.dll</HintPath>
-    </Reference>
     <Reference Include="R2API.Core">
       <HintPath>libs\R2API\R2API.Core.dll</HintPath>
     </Reference>
