@@ -17,7 +17,7 @@ namespace NetworkedPrayerBeads
     [BepInDependency(R2API.RecalculateStatsAPI.PluginGUID)]
     [BepInDependency(R2API.R2API.PluginGUID)]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.DifferentModVersionsAreOk)]
-    [BepInPlugin("com.Moffein.NetworkedPrayerBeads", "NetworkedPrayerBeads", "1.0.0")]
+    [BepInPlugin("com.Moffein.NetworkedPrayerBeads", "NetworkedPrayerBeads", "1.0.1")]
     public class NetworkedPrayerBeadsPlugin : BaseUnityPlugin
     {
         public static ItemDef BeadStatItem;
@@ -65,6 +65,7 @@ namespace NetworkedPrayerBeads
                         {
                             int itemsToGive = 4;    //+20% base
                             itemsToGive += diff - 1;    //+5% for extra stats
+                            itemsToGive *= self.GetBuffCount(DLC2Content.Buffs.ExtraStatsOnLevelUpBuff);
 
                             self.inventory.GiveItem(BeadStatItem, itemsToGive);
                         }
